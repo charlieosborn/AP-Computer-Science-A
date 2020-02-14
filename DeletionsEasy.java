@@ -15,14 +15,13 @@ public class DeletionsEasy
         
         while(numbers.size()>0)
         {
-            
             int index = 0;
             for(int i = 0; i < numbers.size(); i++)
             {
                 if(numbers.get(i) == 0)
                     index = i; 
             }
-            if(index>0)
+            if(index>0 || (index==0 && numbers.size()==1))
                 {for(int i = index; i >= 0; i--)
                     numbers.remove(i);
                  count ++;
